@@ -29,7 +29,7 @@ LABELMAP='labelmap.pbtxt'
 def write_data(frame, data):
     timestamp = str(datetime.now())
     output_string = timestamp + ">> " + str(data) + "\n"
-    return backend(frame,output_string)
+    return output_string
 
 def main():
     #~ Initialise deep learning model to detect objects
@@ -60,7 +60,8 @@ def main():
         print("Number of currently tracked detections: ", len(tracked_detections))
 
         #~ Data transfer function
-        frame,threshold,counter = write_data(frame, tracked_detections)
+        output_string = write_data(frame, tracked_detections)
+	print(output_string)
 
         #~ Calculate FPS
         fps_b = time.time() 
