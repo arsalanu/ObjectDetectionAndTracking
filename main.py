@@ -16,7 +16,7 @@ sys.path.append("../Backend/")
 #*TEST BLOCK {...} 
 
 #~Camera feed globals
-VIDEO_SOURCE = "testvideos/stockvideo6.webm" #0
+VIDEO_SOURCE = "0" #0
 
 FRAME_INPUT_DIMS = (720,405)
 
